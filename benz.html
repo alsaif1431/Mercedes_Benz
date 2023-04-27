@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>showroom</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        *body{
+            box-sizing: border-box;
+            }
+        
+.photo::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    border-radius: inherit;
+    background: repeating-conic-gradient
+    (#f2d622 0 30deg, #22f283 0 60deg);
+    -webkit-mask:
+        linear-gradient(#fff 0 0 ) content-box,
+        linear-gradient(#fff 0 0 );
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+     }
+     .photo>img{
+        grid-area: 1/1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transform-origin: 50% 120.7%;
+     }
+     .photo::after, 
+     .photo>img{
+        animation: m 8s infinite
+        cubic-bezier(.5, -0.2, .5, 1.2);
+     }
+     .photo > img:nth-child(2) {animation-delay: -2s;}
+     .photo > img:nth-child(3) {animation-delay: -4s;}
+     .photo > img:nth-child(4) {animation-delay: -6s;}
+     @keyframes m {
+        0%, 3% {transform: rotate(0)}
+        22%, 27% {transform: rotate(-90deg)}
+        47%, 52% {transform: rotate(-180deg)}
+        72%, 77% {transform: rotate(-270deg)}
+        98%, 100% {transform: rotate(-360deg)}
+     }
+        .logo img{
+        height: 5%;
+        width: 5%;
+        border-radius: 5px;
+        margin: 5px;
+      }
+      .navbar{
+            background-color:darkgray;
+            border-radius: 5px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 70%;
+            z-index: 1000;
+            top: 0; 
+            width: 100%; 
+            margin: 10px;
+            margin-bottom: 30px;
+        }
+        .nav-items a{
+        text-decoration: none;
+        color: black;
+        font-size: 120%;
+     }
+     .nav-items {
+        position: absolute;
+        right: 20px;
+     }
+     .nav-items a:hover {
+        color: brown;
+        font-size: 130%;
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 1s;
+     }
+     .art{
+      height: 500px;
+      width: 800px;
+      border-radius: 10px;
+     }
+     pre{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 180%;
+      border: none;
+      background-color: whitesmoke;
+      }
+      .images img{
+        height: 300px;
+        width: 350px;
+        border-radius: 5px;
+      }
+      .images img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 1s;
+      }
+      .photo img{
+        height: 350px;
+        width: 350px;
+        padding: 20px;
+      }
+      .both{
+        display: flex;
+      }
+      .photo{
+        display: grid;
+      
+      }
+      .info{
+        display: flex;
+      }
+      html{
+            scroll-behavior:smooth;
+        }
+      
+     
+    </style>
+</head>
+<body style="background-color:whitesmoke;">
+  <div class="container2">
+    <div class="navbar">
+        <div class="logo"><img src="Images/benz.webp" alt="Hotstar"></div>
+        <div class="nav-items">
+            <a href="https://www.hotstar.com/in" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#art">Art&Culture</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#collection">Vehicles</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#me">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="login.html" target="_blank">Sign-in</a>&nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="Images/car2.webp" alt="Adams" style="width:100%;">
+            </div>    
+            <div class="item">
+              <img src="Images/cars4.jpg" alt="Dark" style="width:100%; ">
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <h2 id="art">Art & Culture</h2> 
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;Mercedes Benz Art Collection</h3>
+        <hr>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="art"  src="Images/art.webp" alt="">
+        <div class="text">
+        <h2>Art as a Counter Balance.</h2>
+          <pre style="font-family: 'Times New Roman', Times, serif;">
+            The change of name to Mercedes-Benz Group AG will
+            also affect the renowned art collection of the former
+            Daimler AG: The Daimler Art Collection is becoming the 
+            Mercedes-Benz Art Collection. Nothing will change
+            about its orientation as a fixed, avantgarde star in the
+            night sky of art. On the contrary, Director Renate
+            Saif and his team have a lot planned.
+          </pre>
+        </div>
+        <h2 id="collection">The Collectors collectibles</h2> <br> <hr>
+        <div class="images">
+        <img src="Images/v1.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="Images/v2.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="Images/v3.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <br><br> <br>
+        <img src="Images/v4.avif" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="Images/v5.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="Images/v6.jpg" alt="">
+      </div>
+      <pre style="font-family:'Times New Roman', Times, serif;">
+        Since December 2021, the Mercedes-Benz Art Collection has been the organisational
+        responsibility of Renata Jungo Brüngger, Executive Board Member of Mercedes-Benz
+        Group AG responsible for Integrity and Legal Affairs as well as Co-Chair of the Group
+        Sustainability Board. “I have a great passion for art, and am therefore very pleased that I
+        can also be responsible for our art collection at the board level. The colleagues there do
+        excellent work, highlighting the collection’s international reputation.”
+      </pre>
+
+      <h2 id="me">Co-founder</h2>
+      <hr>
+      </div>
+      <div class="both">
+        <div class="photo">
+          <img src="Images/b1.jpeg" alt="">
+          <img  src="Images/IMG5.jpeg" alt="its me">
+          <img src="Images/IMG2.jpeg" alt="">
+          <img src="Images/IMG4.jpeg" alt="">
+          </div>
+          <div class="info">
+            <pre style="font-family:'Times New Roman', Times, serif;">
+            As being a Co-founder of Mercedes Benz I hereby take the full initiative 
+            to provide the best of all the Top class Cars.
+            All luxury cars to the beautiful and Rich Families out there in the 
+            Matrix. 
+            We also fulfill the dreams of many people who love and have the craze to
+            Drift the cars and have a championship Racing by providing them Super
+            Sports Cars.
+                                                                      -- Saif Pasha
+                                                                      <a class="anchor2" href="https://www.linkedin.com/in/saif-pasha-59643b197/" target="_blank"><img class="logo" style="height: 40px; width: 40px; box-shadow: none;" src="Images/linkedin.svg" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="anchor2" href="https://www.hackerrank.com/saifpashanaaz" target="_blank"><img class="logo" style="height: 40px; width: 40px; box-shadow: none;" src="Images/hacker.png" alt=""></a>
+                                                                      
+            </pre >
+          </div>
+    </div>
+  </div>
+  
+        <h3 style="text-align: center; margin: 40px;">CopyRights@saifpasha &copy;</h3>
+      </div>
+    
+</body>
+</html>
